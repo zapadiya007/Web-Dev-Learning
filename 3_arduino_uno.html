@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino Uno</title>
+</head>
+
+<body>
+    <h1>Arduino Uno</h1>
+
+    <hr>
+    <p><em>From Wikipedia, the free encyclopedia </em></p>
+
+    <table>
+        <tr>
+            <td>
+                <p>
+                    The <b>Arduino Uno</b> is an open-source microcontroller board based on the Microchip ATmega328P
+                    microcontroller and developed by Arduino.cc and initially released in 2010. <sup>[2][3]</sup>The
+                    board is
+                    equipped with sets of digital and analog input/output (I/O) pins that may be interfaced to various
+                    expansion boards (shields) and other circuits. <sup>[1]</sup> The board has 14 digital I/O pins (six
+                    capable of
+                    PWM output), 6 analog I/O pins, and is programmable with the Arduino IDE (Integrated Development
+                    Environment), via a type B USB cable.<sup>[4]</sup> It can be powered by the USB cable or by an
+                    external 9-volt
+                    battery, though it accepts voltages between 7 and 20 volts. It is similar to the Arduino Nano and
+                    Leonardo.<sup>[5][6]</sup> The hardware reference design is distributed under a Creative Commons
+                    Attribution
+                    Share-Alike 2.5 license and is available on the Arduino website. Layout and production files for
+                    some versions of the hardware are also available.
+
+                    The word "uno" means "one" in Italian and was chosen to mark the initial release of Arduino
+                    Software.<sup>[1] </sup>The Uno board is the first in a series of USB-based Arduino
+                    boards;<sup>[3]</sup> it and version
+                    1.0 of the Arduino IDE were the reference versions of Arduino, which have now evolved to newer
+                    releases.<sup>[4] </sup>The ATmega328 on the board comes preprogrammed with a bootloader that allows
+                    uploading
+                    new code to it without the use of an external hardware programmer.<sup>[3]</sup>
+
+                    While the Uno communicates using the original STK500 protocol,<sup>[1] </sup>it differs from all
+                    preceding
+                    boards in that it does not use the FTDI USB-to-serial driver chip. Instead, it uses the Atmega16U2
+                    (Atmega8U2 up to version R2) programmed as a USB-to-serial converter.<sup>[7]</sup></p>
+                <br>
+
+                <h3>Contents</h3>
+                <ol>
+                    <li>History</li>
+                    <li>Communication
+                        <ul>
+                            <li>Automatic (software) reset</li>
+                        </ul>
+                    </li>
+                    <li>References</li>
+                </ol>
+            </td>
+            <td>
+                <center>
+                    <h3>Arduino UNO</h3>
+                    <img width="300" src="image/Arduino_Uno_R3.jpg" alt="Arduino Uno">
+                    <h4>Arduino UNO</h4>
+                </center>
+                <p>Developer : Arduino <br>
+                    Manufacturer : Many <br>
+                    Type : Single-board microcontroller[1] <br>
+                    Availability : https://store.arduino.cc/usa/ <br>
+                    Operating system : None <br>
+                    CPU : Microchip AVR (8-bit) <br>
+                    Memory : SRAM <br>
+                    Storage : Flash, EEPROM <br>
+
+                </p>
+
+            </td>
+        </tr>
+    </table>
+
+    <h2>History</h2>
+    <hr>
+    <table>
+        <tr>
+            <td>The Arduino project started at the Interaction Design Institute Ivrea (IDII) in Ivrea, Italy. At that
+                time, the students used a BASIC Stamp microcontroller, at a cost that was a considerable expense for
+                many students. In 2003, Hernando Barragán created the development platform Wiring as a Master's thesis
+                project at IDII, under the supervision of Massimo Banzi and Casey Reas, who are known for work on the
+                Processing language. The project goal was to create simple, low-cost tools for creating digital projects
+                by non-engineers. The Wiring platform consisted of a printed circuit board (PCB) with an ATmega168
+                microcontroller, an IDE based on Processing, and library functions to easily program the
+                microcontroller.<sup>[8]</sup>In 2003, Massimo Banzi, with David Mellis, another IDII student, and David
+                Cuartielles, added support for the cheaper ATmega8 microcontroller to Wiring. But instead of continuing
+                the work on Wiring, they forked the project and renamed it Arduino. Early arduino boards used the FTDI
+                USB-to-serial driver chip and an ATmega168.<sup>[8]</sup> The Uno differed from all preceding boards by
+                featuring
+                the ATmega328P microcontroller and an ATmega16U2 (Atmega8U2 up to version R2) programmed as a
+                USB-to-serial converter.</td>
+
+            <td><img width="300" src="image/Arduino316.jpg" alt=" Arduino_Uno_R3"></td>
+        </tr>
+    </table>
+
+    <h2>Communication</h2>
+    <hr>
+
+    <p>The Arduino/Genuino Uno has a number of facilities for communicating with a computer, another Arduino/Genuino
+        board, or other microcontrollers. The ATmega328 provides UART TTL (5V) serial communication, which is available
+        on digital pins 0 (RX) and 1 (TX). An ATmega16U2 on the board channels this serial communication over USB and
+        appears as a virtual com port to software on the computer. The 16U2 firmware uses the standard USB COM drivers,
+        and no external driver is needed. However, on Windows, a .inf file is required. Arduino Software (IDE) includes
+        a serial monitor which allows simple textual data to be sent to and from the board. The RX and TX LEDs on the
+        board will flash when data is being transmitted via the USB-to-serial chip and USB connection to the computer
+        (but not for serial communication on pins 0 and 1). A SoftwareSerial library allows serial communication on any
+        of the Uno's digital pins.<sup>[7]</sup></p>
+
+    <h3>Automatic (software) reset</h3>
+    <p> Rather than requiring a physical press of the reset button before an upload, the Arduino/Genuino Uno board is
+        designed in a way that allows it to be reset by software running on a connected computer. One of the hardware
+        flow control lines (DTR) of the ATmega8U2/16U2 is connected to the reset line of the ATmega328 via a 100
+        nanofarad capacitor. When this line is asserted (taken low), the reset line drops long enough to reset the
+        chip.<sup>[7]</sup>
+
+        This setup has other implications. When the Uno is connected to a computer running Mac OS X or Linux, it resets
+        each time a connection is made to it from software (via USB). For the following half-second or so, the
+        bootloader is running on the Uno. While it is programmed to ignore malformed data (i.e. anything besides an
+        upload of new code), it will intercept the first few bytes of data sent to the board after a connection is
+        opened. <sup>[7]</sup> </p>
+
+    <h2>References</h2>
+    <hr>
+
+    <ol>
+        <li> "Arduino UNO for beginners - Projects, Programming and Parts". makerspaces.com. 7 February 2017. Retrieved
+            4 February 2018.</li>
+        <li> "Arduino FAQ". 5 April 2013.</li>
+        <li>"What is Arduino?". learn.sparkfun.com. Retrieved 4 February 2018.</li>
+        <li>"Introduction to Arduino" (PDF). princeton.edu. Archived from the original (PDF) on 3 April 2018. Retrieved
+            4 February 2018.</li>
+        <li>"Arduino". store.arduino.cc. Retrieved 10 March 2020.</li>
+        <li>https://arduino.cc https://store.arduino.cc/usa/arduino-leonardo-with-headers</li>
+        <li>official website. CC BY-SA icon.svg Content was copied from this source, which is licensed under the
+            Creative Commons Attribution-Share Alike 3.0 (Unported) (CC-BY-SA 3.0) license.</li>
+        <li>Hernando Barragán (2016-01-01). "The Untold History of Arduino". arduinohistory.github.io. Retrieved
+            2016-03-06.</li>
+        <li>"What is Arduino UNO? A Getting Started Guide". www.rs-online.com. Retrieved 2021-08-04.</li>
+    </ol>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
