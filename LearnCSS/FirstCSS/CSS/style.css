@@ -1,0 +1,26 @@
+body {
+    background-color: aqua;
+    font-size: 20px;
+}
+
+h1 {
+    font-family: cursive;
+    background-color: rgb(0, 255, 128);
+    padding: 20px;
+    text-align: center;
+    margin: 20px;
+}
+
+
+#thard,#sec {
+    color: black;
+    background-color: chartreuse;
+}
+
+.purpul {
+    color: rgb(255, 0, 255);
+    background-color: #1a2916;
+}
+
+
+
