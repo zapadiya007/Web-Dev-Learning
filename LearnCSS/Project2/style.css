@@ -1,0 +1,20 @@
+.img1 {
+    margin: 20px;
+    float: right;
+}
+.img2{
+    margin: 20px;
+    float: right;
+    /* clear: both; */
+}
+.p2{
+    clear: both;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+}
+p{
+    text-align: justify;
+}
