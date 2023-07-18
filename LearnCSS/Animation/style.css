@@ -1,0 +1,42 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: aqua;
+    
+}
+
+.ulist{
+
+    /* background-color: aliceblue; */
+
+    margin: 13px 18px;
+
+    list-style: none;
+    display: flex;
+    gap:20px;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+}
+
+.list{
+
+    padding:  8px 10px;
+    font-size: 1.1rem;
+    border: 1px solid red;
+    background-color: greenyellow;
+    transition: 0.3s ease-in;
+}
+
+.list:hover{
+
+    cursor: pointer;
+    color: aliceblue;
+    background-color: black;
+    transform: translateY(-10px);
+    
+}
