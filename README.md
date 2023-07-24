@@ -1,2 +1,10 @@
 # Web-Dev
-This is Web Development Repo. 
+This is Web Development Repo.  
+Learning of Web development 
+
+
+# Some Web Development Resource :
+
+- Example of CSS Website [Link](https://www.awwwards.com/)
+- Favicon ion generator [Link](https://favicon.io/)
+- Colors finding [Link](https://coolors.co/)
